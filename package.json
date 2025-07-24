@@ -4,8 +4,8 @@
   "description": "This is Backend of devTender Project",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node Src/app.js",
+    "dev": "nodemon Src/app.js"
   },
   "author": "Angad Patil",
   "license": "ISC",

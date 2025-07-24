@@ -1,5 +1,5 @@
 const express = require("express");
-const connectDB = require("./Src/Config/Database");
+const connectDB = require("./Config/Database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const app = express();
@@ -9,10 +9,10 @@ app.use("/", cors({ origin: "http://localhost:5173", credentials: true }));
 app.use("/", express.json());
 app.use("/", cookieParser());
 
-const authRouter = require("./Src/Routes/auth");
-const profileRouter = require("./Src/Routes/profile");
-const connectionRequestRouter = require("./Src/Routes/connectionRequest");
-const userRouter = require("./Src/Routes/user");
+const authRouter = require("./Routes/auth");
+const profileRouter = require("./Routes/profile");
+const connectionRequestRouter = require("./Routes/connectionRequest");
+const userRouter = require("./Routes/user");
 
 app.use("/", authRouter);
 app.use("/", profileRouter);
